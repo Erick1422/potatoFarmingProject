@@ -30,10 +30,10 @@
         <!-- Sidebar -->
         <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.html">
+                <!-- <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
-                </div>
+                </div> -->
                 <div class="sidebar-brand-text mx-3">Potato Farming</div>
             </a>
 
@@ -42,9 +42,9 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="dashboard.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span>
+                    <span>Panel</span>
                 </a>
             </li>
 
@@ -187,23 +187,64 @@
                     <!-- Se podría Cargar las fechas o id del cultivo y aca se seleccionaría para saber los costos de esa producción-->
                     <form>
                         <div class="form-group mb-2">
-                            <label for="">Cultivo</label>
+                            <label for="soil">Cultivo</label>
+                            <select class="form-control" name="">
+                                <option value="">Seleccione una opción</option>
+                                <option>1. - papa - 14/09/2023</option>
+                                <option>2. - papa criolla - 20/09/2023</option>
+                            </select>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="exampleFormControlInput1">Costo del abono</label>
                             <input type="number" class="form-control" id="">
                         </div>
                         <div class="form-group mb-2">
-                            <label for="exampleFormControlInput1">Abono</label>
+                            <label for="exampleFormControlInput1">Costo de la mano de obra</label>
                             <input type="number" class="form-control" id="">
                         </div>
                         <div class="form-group mb-2">
-                            <label for="exampleFormControlInput1">Mano de obra</label>
+                            <label for="exampleFormControlInput1">Costo de los fungicidas</label>
                             <input type="number" class="form-control" id="">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Otros costos</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <input type="number" class="form-control" id="">
                         </div>
                         <button type="submit" class="btn btn-primary mb-2">Guardar</button>
                     </form>
+
+                    <br>
+                    <br>
+
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Cultivos</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="cropsTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Id</th>
+                                            <th>Cultivo</th>
+                                            <th>Costo abono</th>
+                                            <th>Costo mano de obra</th>
+                                            <th>Costo fungicidas</th>
+                                            <th>Otros costos</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <!-- Se llena dinámicamente -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- /.container-fluid -->
             </div>

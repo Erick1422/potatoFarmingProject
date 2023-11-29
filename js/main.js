@@ -1,24 +1,41 @@
-// import DataTable from './demo/datatables-demo';
-
 document.addEventListener('DOMContentLoaded', () => {
 
     // Leer el local storage
     let cropsLocalStrg = JSON.parse(window.localStorage.getItem('crops')) || [];
-    console.log({ cropsLocalStrg });
-
     let costslocalStrg = JSON.parse(window.localStorage.getItem('costs')) || [];
+    let userObj = JSON.parse(window.localStorage.getItem('user')) || {};
+
+    // Poner Id al elemento del nombre
+
+    console.log({ costslocalStrg });
 
     const cropsForm = document.getElementById('cropsForm');
     const costsForm = document.getElementById('cropsForm');
 
-    function addItems (params) {
-        
-    }
-
     if (cropsForm) {
 
+        if (Object.keys(userObj).length === 0) {
+            window.location.href = '/';
+        }
+
+        const cropsTable = document.getElementById('cropsTable');
+        const tableBody = cropsTable.querySelector('tbody');
+
+        for (let i = 0; i <= cropsLocalStrg.length; i++) {
+            let trElement = document.createElement('tr');
+
+            for (const key in cropsLocalStrg[i]) {
+                const tdElement = document.createElement('td');
+                const element = cropsLocalStrg[i][key];
+
+                tdElement.textContent = element;
+
+                trElement.appendChild(tdElement);
+            }
+            tableBody.appendChild(trElement);
+        }
+
         cropsForm.addEventListener('submit', (e) => {
-            e.preventDefault();
 
             const cropObj = {
                 id: cropsLocalStrg.length + 1,
@@ -39,15 +56,68 @@ document.addEventListener('DOMContentLoaded', () => {
 
             cropsLocalStrg.push(cropObj);
             window.localStorage.setItem("crops", JSON.stringify(cropsLocalStrg));
-
-            console.log(cropsLocalStrg);
         });
-
-        // llenar la tabla con la data del local storage
     }
 
     if (costsForm) {
 
+        if (Object.keys(userObj).length === 0) {
+            window.location.href = '/';
+        }
+
+    }
+
+    const loginForm = document.getElementById('loginForm');
+
+    if (loginForm) {
+
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const user = {
+                email: '',
+                password: ''
+            }
+
+            let counter = 0;
+
+            for (let i = 0; i <= e.target.elements.length; i++) {
+                let element = e.target.elements[i];
+
+                if (user.hasOwnProperty(element?.name) && userObj[element.name] == element.value) {
+                    counter++;
+                }
+            }
+
+            console.log(counter);
+            counter >= 2 ? window.location.href = '/dashboard.html' : window.location.href = '/';
+        });
+
+    }
+
+    const registerForm = document.getElementById('registerForm');
+
+    if (registerForm) {
+        registerForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const user = {
+                name: '',
+                lastName: '',
+                email: '',
+                password: ''
+            }
+
+            for (let i = 0; i <= e.target.elements.length; i++) {
+                let element = e.target.elements[i];
+
+                if (user.hasOwnProperty(element?.name)) {
+                    user[element.name] = element.value;
+                }
+            }
+            window.localStorage.setItem("user", JSON.stringify(user));
+            window.location.href = '/';
+        });
     }
 
 });
