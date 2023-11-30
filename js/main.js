@@ -20,6 +20,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const url = `${location.pathname}`.split('/');
     console.log(url);
 
+    const userName = document.getElementById('userName');
+    if (userName) {
+        const { name, lastName } = userObj;
+        console.log(userObj);
+        userName.textContent = `${name} ${lastName}`;
+    }
+
     if (cropsForm) {
 
         /* if (Object.keys(userObj).length === 0) {
@@ -261,7 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
             window.localStorage.setItem("user", JSON.stringify(user));
-            
+
             const url = `${window.location.pathname}`.split('/');
 
             if (url.length >= 3) {

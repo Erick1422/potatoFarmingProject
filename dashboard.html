@@ -158,7 +158,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Erick Buitrago</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small" id="userName"></span>
                                 <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
@@ -185,16 +185,15 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <!-- <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Panel</h1>
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-                    </div>
+                    </div> -->
 
                     <!-- Content Row -->
-                    <div class="row">
+                    <!-- <div class="row">
 
-                        <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-primary shadow h-100 py-2">
                                 <div class="card-body">
@@ -212,7 +211,6 @@
                             </div>
                         </div>
 
-                        <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-success shadow h-100 py-2">
                                 <div class="card-body">
@@ -229,168 +227,243 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- Content Row -->
+                    <h4 class="h4 mb-0 text-gray-800">Control de enfermedades</h4>
 
-                    <div class="row">
-
-                        <!-- Area Chart -->
-                        <div class="col-xl-8 col-lg-7">
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
-                                    <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                            aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Dropdown Header:</div>
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="chart-area">
-                                        <canvas id="myAreaChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Pie Chart -->
-                        <div class="col-xl-4 col-lg-5">
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
-                                    <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                            aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Dropdown Header:</div>
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="chart-pie pt-4 pb-2">
-                                        <canvas id="myPieChart"></canvas>
-                                    </div>
-                                    <div class="mt-4 text-center small">
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-primary"></i> Direct
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-success"></i> Social
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-info"></i> Referral
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Content Row -->
-                    <div class="row">
-
-                        <!-- Content Column -->
-                        <div class="col-lg-6 mb-4">
-
-                            <!-- Project Card Example -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
-                                </div>
-                                <div class="card-body">
-                                    <h4 class="small font-weight-bold">Server Migration <span
-                                            class="float-right">20%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 20%"
-                                            aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Sales Tracking <span
-                                            class="float-right">40%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 40%"
-                                            aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Customer Database <span
-                                            class="float-right">60%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar" role="progressbar" style="width: 60%"
-                                            aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Payout Details <span
-                                            class="float-right">80%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-info" role="progressbar" style="width: 80%"
-                                            aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Account Setup <span
-                                            class="float-right">Complete!</span></h4>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%"
-                                            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="col-lg-6 mb-4">
-
+                    <div class="row mt-4">
+                        <div class="col-lg-4 mb-4">
                             <!-- Illustrations -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Illustrations</h6>
+                                    <h6 class="m-0 font-weight-bold text-dark">Gota, tizón tardío o lancha negra
+                                    </h6>
                                 </div>
                                 <div class="card-body">
                                     <div class="text-center">
-                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
-                                            src="img/undraw_posting_photo.svg" alt="...">
+                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 12rem;"
+                                            src="img/gotaTizonTardío.png" alt="...">
                                     </div>
-                                    <p>Add some quality, svg illustrations to your project courtesy of <a
-                                            target="_blank" rel="nofollow" href="https://undraw.co/">unDraw</a>, a
-                                        constantly updated collection of beautiful svg images that you can use
-                                        completely free and without attribution!</p>
-                                    <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on
-                                        unDraw &rarr;</a>
+                                    <b><span>Caracteristicas</span></b>
+                                    <p>Las condiciones ambientales que la favorecen son: humedad elevada (alta
+                                        humedad relativa) y temperaturas entre 18 y 22°C durante 8 a 10 horas.
+                                    </p>
+
+                                    <b><span>Manejo</span></b>
+                                    <ul>
+                                        <li>Uso de semillas sana, variedades con tolerancia a la enfermedad.</li>
+                                        <li>Eliminación de residuos de cosecha anteriores (toyas). </li>
+                                    </ul>
                                 </div>
                             </div>
+                        </div>
 
-                            <!-- Approach -->
+                        <div class="col-lg-4 mb-4">
+                            <!-- Illustrations -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Development Approach</h6>
+                                    <h6 class="m-0 font-weight-bold text-dark">Costra negra Rhizoctoniasis de la
+                                        papa</h6>
                                 </div>
                                 <div class="card-body">
-                                    <p>SB Admin 2 makes extensive use of Bootstrap 4 utility classes in order to reduce
-                                        CSS bloat and poor page performance. Custom CSS classes are used to create
-                                        custom components and custom utility classes.</p>
-                                    <p class="mb-0">Before working with this theme, you should become familiar with the
-                                        Bootstrap framework, especially the utility classes.</p>
+                                    <div class="text-center">
+                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 12rem;"
+                                            src="img/costraNegra.png" alt="...">
+                                    </div>
+                                    <b><span>Caracteristicas</span></b>
+                                    <p>Las costras negras afectan los estolones o brotes del tubérculo causando
+                                        manchas y chancros de color café - rojizo, y pueden causar la muerte de los
+                                        puntos de crecimiento.
+                                    </p>
+
+                                    <b><span>Manejo</span></b>
+                                    <ul>
+                                        <li>Uso de fungicidas en las etapas de almacenamiento siembra y desinfección
+                                            del suelo en el surco.</li>
+                                        <li>Siembra poco profunda, para permitir una rápida emergencia, reduciendo
+                                            el daño a los nuevos brotes.</li>
+                                    </ul>
                                 </div>
                             </div>
+                        </div>
 
+                        <div class="col-lg-4 mb-4">
+                            <!-- Illustrations -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-dark">Sarna polvosa de la papa
+                                    </h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="text-center">
+                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 12rem;"
+                                            src="img/sarnapolvosa.png" alt="...">
+                                    </div>
+                                    <b><span>Caracteristicas</span></b>
+                                    <p>Suelos con alta humedad, altos contenidos de materia orgánica y bajas
+                                        temperaturas son condiciones favorables al desarrollo de la enfermedad.
+                                    </p>
+
+                                    <b><span>Manejo</span></b>
+                                    <ul>
+                                        <li>Usar materia orgánica bien descompuesta.</li>
+                                        <li>Evitar los encharcamientos en las áreas de cultivo.</li>
+                                        <li>Evitar la humedad excesiva sobre el follaje en zonas donde se utilice
+                                            riego por aspersión.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 mb-4">
+                            <!-- Illustrations -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-dark">Tizón Temprano</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="text-center">
+                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 12rem;"
+                                            src="img/tizóntemprano.png" alt="...">
+                                    </div>
+                                    <b><span>Caracteristicas</span></b>
+                                    <p>Enfermedad principalmente del follaje que se presenta desde los 90 días
+                                        posteriores a la siembra en adelante. Se ve favorecido por la humedad y
+                                        temperaturas por encima de los 25°. En zonas donde se utiliza riego por
+                                        aspersión el patógeno ejerce una mayor presión.
+                                    </p>
+
+                                    <b><span>Manejo</span></b>
+                                    <ul>
+                                        <li>Uso de fungicidas preventivos y sistémicos cuando aparecen los primeros
+                                            síntomas en la planta.
+                                        </li>
+                                        <li>Evita humedad excesiva sobre el follaje en zonas donde se utilice riego
+                                            por aspersión.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 mb-4">
+                            <!-- Illustrations -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-dark">Pie negro o Pudrición blanda
+                                    </h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="text-center">
+                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 12rem;"
+                                            src="img/pienegro.png" alt="...">
+                                    </div>
+                                    <b><span>Caracteristicas</span></b>
+                                    <p>Enfermedad bacteriana que ataca varias estructuras de la planta como hojas,
+                                        tallos y tubérculos. Esta bacteria puede estar presente en el tubérculo, a
+                                        veces sin expresar síntomas, pero sigue viva y puede activarse cuando las
+                                        condiciones de humedad y temperatura son favorables para su desarrollo y
+                                        multiplicación.
+                                    </p>
+
+                                    <b><span>Manejo</span></b>
+                                    <ul>
+                                        <li>Rotación de cultivos (método más eficaz).</li>
+                                        <li>Evitar la siembra del cultivo en lotes que ya estén contaminados.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <h4 class="h4 mb-0 text-gray-800">Control de plagas</h4>
+
+                    <div class="row mt-4">
+                        <div class="col-lg-4 mb-4">
+                            <!-- Illustrations -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-dark">Gusano Blanco, gorgojo de los Andes
+                                    </h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="text-center">
+                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 12rem;"
+                                            src="img/gusanoblancopapa.png" alt="...">
+                                    </div>
+                                    <b><span>Caracteristicas y daños</span></b>
+                                    <p>Es considerado unos de los insectos plaga más importantes que atacan el cultivo
+                                        de papa, ya que sus daños pueden afectar severamente los rendimientos del
+                                        cultivo.
+                                    </p>
+
+                                    <b><span>Manejo</span></b>
+                                    <ul>
+                                        <li>No dejar rastrojos, plantas sin cosechar ni tubérculos en los lotes.
+                                        </li>
+                                        <li>Uso de insecticidas con el registro para la plaga en el cultivo.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 mb-4">
+                            <!-- Illustrations -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-dark">Polilla Guatemalteca
+                                    </h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="text-center">
+                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 12rem;"
+                                            src="img/PolillaGuatemalteca.png" alt="...">
+                                    </div>
+                                    <b><span>Caracteristicas y daños</span></b>
+                                    <p>Es considerado unos de los insectos plaga más importantes que atacan el cultivo
+                                        de papa, debido a que su ataque causa grandes pérdidas y las medidas de control
+                                        químico no son suficientes la mayoría de las veces. Están presentes en todo el
+                                        ciclo del cultivo, incluyendo el almacenamiento.
+                                    </p>
+
+                                    <b><span>Manejo</span></b>
+                                    <ul>
+                                        <li>Protección de la semilla en el almacenamiento, mediante cubiertas,
+                                            espolvoreo de insecticidas secos y luz difusa.
+                                        </li>
+                                        <li>Destrucción de malezas.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 mb-4">
+                            <!-- Illustrations -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-dark">Pulguilla
+                                    </h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="text-center">
+                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 12rem;"
+                                            src="img/Pulguilla.png" alt="...">
+                                    </div>
+                                    <b><span>Caracteristicas y daños</span></b>
+                                    <p>Este cucarrón puede ocasionar daños considerables en la planta cuando es muy
+                                        abundante. Se ha encontrado que algunos patógenos (microorganismos) están
+                                        asociados con este insecto.
+                                    </p>
+
+                                    <b><span>Manejo</span></b>
+                                    <ul>
+                                        <li>Manejo y control de malezas.</li>
+                                        <li>Destrucción de residuos de cosecha, principalmente papas que regerminan
+                                            luego de la cosecha (papas toyas).</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -451,12 +524,7 @@
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
 
-    <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 
