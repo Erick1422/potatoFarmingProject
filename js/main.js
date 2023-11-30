@@ -232,12 +232,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const url = `${window.location.pathname}`.split('/');
-            console.log(url);
 
             if (counter >= 2) {
-                url.length >= 3 ? `${window.location.origin}/${url[1]}/dashboard.html` : '/dashboard.html';
+                location.href = url.length >= 3 ? `${window.location.origin}/${url[1]}/dashboard.html` : '/dashboard.html';
             } else {
-                url.length >= 3 ? `${window.location.origin}/${url[1]}/index.html` : '/index.html';
+                location.href = url.length >= 3 ? `${window.location.origin}/${url[1]}/index.html` : '/index.html';
             }
         });
 
@@ -261,9 +260,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     user[element.name] = element.value;
                 }
             }
-
-            const url = `${window.location.pathname}`.split('/');
             window.localStorage.setItem("user", JSON.stringify(user));
+            
+            const url = `${window.location.pathname}`.split('/');
 
             if (url.length >= 3) {
                 console.log(`${window.location.origin}/${url[1]}/index.html`);
