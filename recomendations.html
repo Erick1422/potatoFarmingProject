@@ -45,6 +45,7 @@
                 <a class="nav-link" href="dashboard.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Panel</span>
+                    <a class="dropdown-item" href="#">Action</a>
                 </a>
             </li>
 
@@ -56,10 +57,17 @@
                 Registros
             </div>
 
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="crops.html">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Cultivos</span></a>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="recomendations.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Recomendaciones</span></a>
+                    <!-- Podría ser información -->
             </li>
 
             <!-- Divider -->
@@ -75,7 +83,7 @@
             <hr class="sidebar-divider">
 
             <!-- Nav Item - Tables -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="costs.html">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Costos</span></a>
@@ -182,74 +190,8 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Costos</h1>
-
-                    <!-- Se podría Cargar las fechas o id del cultivo y aca se seleccionaría para saber los costos de esa producción-->
-                    <form id="costsForm">
-                        <div class="form-group mb-2">
-                            <label for="soil">Cultivo</label>
-                            <select class="form-control" name="crop">
-                                <option value="">Seleccione una opción</option>
-                            </select>
-                        </div>
-                        <div class="form-group mb-2">
-                            <label for="exampleFormControlInput1">Costo del abono</label>
-                            <input type="number" class="form-control" id="" name="fertilizerCost">
-                        </div>
-                        <div class="form-group mb-2">
-                            <label for="exampleFormControlInput1">Costo de la mano de obra</label>
-                            <input type="number" class="form-control" id="" name="labourCost">
-                        </div>
-                        <div class="form-group mb-2">
-                            <label for="exampleFormControlInput1">Costo de los fungicidas</label>
-                            <input type="number" class="form-control" id="" name="fungicideCost">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlTextarea1">Otros costos</label>
-                            <input type="number" class="form-control" id="" name="otherCosts">
-                        </div>
-                        <button type="submit" class="btn btn-primary mb-2">Guardar</button>
-                    </form>
-
-                    <br>
-                    <br>
-
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Cultivos</h6>
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="costsTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>Id</th>
-                                            <th>Cultivo</th>
-                                            <th>Costo abono</th>
-                                            <th>Costo mano de obra</th>
-                                            <th>Costo fungicidas</th>
-                                            <th>Otros costos</th>
-                                            <th>Total</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>Id</th>
-                                            <th>Cultivo</th>
-                                            <th>Costo abono</th>
-                                            <th>Costo mano de obra</th>
-                                            <th>Costo fungicidas</th>
-                                            <th>Otros costos</th>
-                                            <th>Total</th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        <!-- Se llena dinámicamente -->
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
+                    <h1 class="h3 mb-4 text-gray-800">Recomendaciones</h1>
+                    
                 </div>
                 <!-- /.container-fluid -->
             </div>
@@ -306,7 +248,13 @@
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
 
+    <!-- Page level plugins -->
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
     <script src="js/main.js"></script>
+
+    <!-- <script src="js/demo/datatables-demo.js"></script> -->
 
 </body>
 

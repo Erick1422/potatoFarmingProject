@@ -31,9 +31,9 @@
         <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.html">
-                <!-- <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
-                </div> -->
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-solid fa-seedling"></i>
+                </div>
                 <div class="sidebar-brand-text mx-3">Potato Farming</div>
             </a>
 
@@ -184,23 +184,20 @@
                     <!-- Page Heading -->
                     <h1 class="h3 mb-4 text-gray-800">Seguimiento</h1>
 
-                    <form id="variablesForm">
+                    <form id="tracingForm">
                         <div class="form-group mb-2">
                             <label for="exampleFormControlInput1">Cultivo</label>
-                            <select class="form-control" id="exampleFormControlInput1">
+                            <select class="form-control" name="crop">
                                 <option value="">Seleccione una opción</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="date">Fecha de riego</label>
-                            <input type="date" class="form-control" id="date" value="">
+                            <input type="date" class="form-control" id="date" name="date">
                         </div>
                         <div class="form-group mb-2">
                             <label for="exampleFormControlInput1">Etapa</label>
-                            <select class="form-control" id="exampleFormControlInput1">
+                            <select class="form-control" name="stage"> 
                                 <option value="">Seleccione una opción</option>
                                 <option>Pre-siembra</option>
                                 <option>Inicio Estolonización</option>
@@ -211,7 +208,7 @@
                         </div>
                         <div class="form-group">
                             <label for="text">Información adicional</label>
-                            <textarea class="form-control" id="text" rows="3"></textarea>
+                            <textarea class="form-control" id="text" rows="3" name="aditionalInformation"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary mb-2">Guardar</button>
                     </form>
@@ -225,9 +222,10 @@
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <table class="table table-bordered" id="tracingTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
+                                            <th>Id</th>
                                             <th>Cultivo</th>
                                             <th>Fecha</th>
                                             <th>Etapa</th>
@@ -236,6 +234,7 @@
                                     </thead>
                                     <tfoot>
                                         <tr>
+                                            <th>Id</th>
                                             <th>Cultivo</th>
                                             <th>Fecha</th>
                                             <th>Etapa</th>
@@ -243,12 +242,7 @@
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                        <tr>
-                                            <td>61</td>
-                                            <td>2011/04/25</td>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                        </tr>
+                                        <!-- Se llena dinámicamente -->
                                     </tbody>
                                 </table>
                             </div>
@@ -310,6 +304,8 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
+
+    <script src="js/main.js"></script>
 
 </body>
 
